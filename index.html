@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <meta
+    name="description"
+    content="PremiumHome conecta familias con propiedades seleccionadas, visitas guiadas y asesoría inmobiliaria personalizada en Lima."
+  >
+  <meta name="theme-color" content="#0d2b25">
+
+  <title>PremiumHome | Propiedades exclusivas en Lima</title>
+
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d2b25'/%3E%3Cpath d='M14 31 32 16l18 15v19H37V38H27v12H14V31Z' fill='%23e2bc74'/%3E%3C/svg%3E"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- HEADER -->
+  <header class="site-header" id="inicio">
+    <nav class="navbar container" aria-label="Navegación principal">
+
+      <a href="#inicio" class="brand" aria-label="Volver al inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40">
+            <path d="M7 18.5 20 8l13 10.5V32H23v-8h-6v8H7Z" fill="currentColor" />
+          </svg>
+        </span>
+        <span>Premium<strong>Home</strong></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        aria-label="Abrir menú"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-panel" id="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#propiedades">Propiedades</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#contacto" class="nav-cta">Agendar visita</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-glow hero-glow-left" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-right" aria-hidden="true"></div>
+
+      <div class="container hero-layout">
+
+        <div class="hero-copy">
+          <span class="hero-label">Inmobiliaria residencial · Lima</span>
+
+          <h1>
+            Propiedades que
+            <span>se sienten</span>
+            correctas desde
+            la primera visita.
+          </h1>
+
+          <p class="hero-lead">
+            Descubre viviendas seleccionadas, compara con claridad y agenda una visita con un proceso simple, elegante y bien guiado.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#propiedades" class="button button-primary">
+              Explorar propiedades
+            </a>
+
+            <button type="button" class="button button-secondary" data-open-chat>
+              Hablar con el asistente
+            </button>
+          </div>
+
+          <div class="hero-mini-proof">
+            <div>
+              <strong>12+</strong>
+              <span>Años asesorando</span>
+            </div>
+            <div>
+              <strong>48 h</strong>
+              <span>Para coordinar visita</span>
+            </div>
+            <div>
+              <strong>4</strong>
+              <span>Propiedades destacadas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+
+          <div class="hero-main-card">
+            <figure class="hero-main-image">
+              <img
+                src="img/3.png"
+                alt="Mansión lujosa en Casuarinas, Lima"
+                loading="eager"
+              >
+            </figure>
+
+            <div class="hero-main-content">
+              <div class="hero-main-top">
+                <span class="hero-badge">Propiedad destacada</span>
+                <span class="hero-price">$700,000</span>
+              </div>
+
+              <div class="hero-main-bottom">
+                <div>
+                  <p class="hero-location">Casuarinas, Lima</p>
+                  <h2>Mansión lujosa</h2>
+                  <ul class="hero-meta">
+                    <li>6 hab.</li>
+                    <li>5 baños</li>
+                    <li>680 m²</li>
+                  </ul>
+                </div>
+
+                <button
+                  class="text-link-button property-action"
+                  type="button"
+                  data-property="mansion-lujosa"
+                >
+                  Ver propiedad →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-floating-card card-a">
+            <span>Selección cuidada</span>
+            <strong>Solo propiedades con datos claros y comparables</strong>
+          </div>
+
+          <div class="hero-floating-card card-b">
+            <span>Atención personalizada</span>
+            <strong>Te guiamos hasta la visita</strong>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust-strip" aria-label="Ventajas de PremiumHome">
+      <div class="container trust-grid">
+        <article>
+          <div class="trust-icon">✓</div>
+          <div>
+            <h3>Información precisa</h3>
+            <p>Precio, ubicación y características sin rodeos.</p>
+          </div>
+        </article>
+
+        <article>
+          <div class="trust-icon">⌂</div>
+          <div>
+            <h3>Selección curada</h3>
+            <p>Menos ruido, mejores opciones para evaluar.</p>
+          </div>
+        </article>
+
+        <article>
+          <div class="trust-icon">↗</div>
+          <div>
+            <h3>Proceso guiado</h3>
+            <p>Desde la búsqueda hasta la coordinación final.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROPIEDADES -->
+    <section class="properties-section section" id="propiedades">
+      <div class="container">
+
+        <div class="section-head properties-head">
+          <div class="section-title-block">
+            <span class="section-kicker">Portafolio activo</span>
+            <h2>Encuentra una propiedad sin perder tiempo</h2>
+          </div>
+
+          <div class="section-side-copy">
+            <p>
+              Filtra por distrito o por número de dormitorios y abre los detalles sin salir del flujo de búsqueda.
+            </p>
+          </div>
+        </div>
+
+        <div class="toolbar-shell">
+          <div class="property-toolbar" aria-label="Filtros de propiedades">
+
+            <label class="search-box" for="property-search">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="m21 21-4.35-4.35m2.35-5.15A7.5 7.5 0 1 1 4 11.5a7.5 7.5 0 0 1 15 0Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <input
+                id="property-search"
+                type="search"
+                placeholder="Buscar por distrito o propiedad..."
+                autocomplete="off"
+              >
+            </label>
+
+            <select id="district-filter" aria-label="Filtrar por distrito">
+              <option value="all">Todos los distritos</option>
+              <option value="la molina">La Molina</option>
+              <option value="san isidro">San Isidro</option>
+              <option value="casuarinas">Casuarinas</option>
+              <option value="surco">Surco</option>
+            </select>
+
+            <select id="bedroom-filter" aria-label="Filtrar por dormitorios">
+              <option value="all">Dormitorios</option>
+              <option value="3">3+</option>
+              <option value="4">4+</option>
+              <option value="5">5+</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+
+          <div class="toolbar-foot">
+            <p id="property-count" class="property-count">4 propiedades disponibles</p>
+
+            <button type="button" id="clear-filters" class="toolbar-clear">
+              Limpiar filtros
+            </button>
+          </div>
+        </div>
+
+        <div class="propiedades-grid" id="property-grid">
+
+          <!-- 1 -->
+          <article
+            class="propiedad-card"
+            data-name="villa moderna"
+            data-district="la molina"
+            data-bedrooms="4"
+          >
+            <figure class="property-image">
+              <img
+                src="img/1.png"
+                alt="Villa moderna con fachada amplia y acabados contemporáneos"
+                loading="lazy"
+              >
+              <figcaption>Disponible</figcaption>
+
+              <button
+                class="favorite-button"
+                type="button"
+                aria-label="Guardar Villa moderna"
+                title="Guardar propiedad"
+              >
+                ♡
+              </button>
+            </figure>
+
+            <div class="property-content">
+              <div class="property-topline">
+                <span class="location">La Molina, Lima</span>
+                <span class="property-code">PH-001</span>
+              </div>
+
+              <h3>Villa moderna</h3>
+
+              <ul class="property-meta" aria-label="Características de Villa moderna">
+                <li>4 hab.</li>
+                <li>3 baños</li>
+                <li>320 m²</li>
+              </ul>
+
+              <p class="descripcion">
+                Villa luminosa con piscina, jardín privado y zona social integrada.
+              </p>
+
+              <div class="property-footer">
+                <p class="precio">
+                  <small>Precio</small>
+                  $50,000
+                </p>
+
+                <button
+                  type="button"
+                  class="property-action"
+                  data-property="villa-moderna"
+                >
+                  Ver detalles →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article
+            class="propiedad-card"
+            data-name="residencial lujoso"
+            data-district="san isidro"
+            data-bedrooms="3"
+          >
+            <figure class="property-image">
+              <img
+                src="img/2.png"
+                alt="Residencia privada con diseño elegante y entrada principal"
+                loading="lazy"
+              >
+              <figcaption>Nuevo</figcaption>
+
+              <button
+                class="favorite-button"
+                type="button"
+                aria-label="Guardar Residencial lujoso"
+                title="Guardar propiedad"
+              >
+                ♡
+              </button>
+            </figure>
+
+            <div class="property-content">
+              <div class="property-topline">
+                <span class="location">San Isidro, Lima</span>
+                <span class="property-code">PH-002</span>
+              </div>
+
+              <h3>Residencial lujoso</h3>
+
+              <ul class="property-meta" aria-label="Características de Residencial lujoso">
+                <li>3 hab.</li>
+                <li>2 baños</li>
+                <li>240 m²</li>
+              </ul>
+
+              <p class="descripcion">
+                Propiedad privada cerca de parques, comercios y vías principales.
+              </p>
+
+              <div class="property-footer">
+                <p class="precio">
+                  <small>Precio</small>
+                  $20,000
+                </p>
+
+                <button
+                  type="button"
+                  class="property-action"
+                  data-property="residencial-lujoso"
+                >
+                  Ver detalles →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article
+            class="propiedad-card"
+            data-name="mansión lujosa mansion lujosa"
+            data-district="casuarinas"
+            data-bedrooms="6"
+          >
+            <figure class="property-image">
+              <img
+                src="img/3.png"
+                alt="Mansión de lujo con áreas amplias y exteriores cuidados"
+                loading="lazy"
+              >
+              <figcaption>Premium</figcaption>
+
+              <button
+                class="favorite-button"
+                type="button"
+                aria-label="Guardar Mansión lujosa"
+                title="Guardar propiedad"
+              >
+                ♡
+              </button>
+            </figure>
+
+            <div class="property-content">
+              <div class="property-topline">
+                <span class="location">Casuarinas, Lima</span>
+                <span class="property-code">PH-003</span>
+              </div>
+
+              <h3>Mansión lujosa</h3>
+
+              <ul class="property-meta" aria-label="Características de Mansión lujosa">
+                <li>6 hab.</li>
+                <li>5 baños</li>
+                <li>680 m²</li>
+              </ul>
+
+              <p class="descripcion">
+                Residencia con terraza, jardín amplio y acabados de alta gama.
+              </p>
+
+              <div class="property-footer">
+                <p class="precio">
+                  <small>Precio</small>
+                  $700,000
+                </p>
+
+                <button
+                  type="button"
+                  class="property-action"
+                  data-property="mansion-lujosa"
+                >
+                  Ver detalles →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article
+            class="propiedad-card"
+            data-name="casa familiar premium"
+            data-district="surco"
+            data-bedrooms="5"
+          >
+            <figure class="property-image">
+              <img
+                src="img/4.png"
+                alt="Casa familiar moderna con espacios interiores cómodos"
+                loading="lazy"
+              >
+              <figcaption>Oportunidad</figcaption>
+
+              <button
+                class="favorite-button"
+                type="button"
+                aria-label="Guardar Casa familiar premium"
+                title="Guardar propiedad"
+              >
+                ♡
+              </button>
+            </figure>
+
+            <div class="property-content">
+              <div class="property-topline">
+                <span class="location">Surco, Lima</span>
+                <span class="property-code">PH-004</span>
+              </div>
+
+              <h3>Casa familiar premium</h3>
+
+              <ul class="property-meta" aria-label="Características de Casa familiar premium">
+                <li>5 hab.</li>
+                <li>4 baños</li>
+                <li>410 m²</li>
+              </ul>
+
+              <p class="descripcion">
+                Casa amplia con sala doble, estudio y patio ideal para reuniones.
+              </p>
+
+              <div class="property-footer">
+                <p class="precio">
+                  <small>Precio</small>
+                  $135,000
+                </p>
+
+                <button
+                  type="button"
+                  class="property-action"
+                  data-property="casa-familiar"
+                >
+                  Ver detalles →
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="empty-state" id="property-empty" hidden>
+          <strong>No encontramos propiedades con esos filtros.</strong>
+          <p>Prueba con otro distrito, otra búsqueda o menos dormitorios.</p>
+          <button class="button button-secondary" type="button" id="clear-filters">
+            Limpiar filtros
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="benefits-section section" id="beneficios">
+      <div class="container">
+        <div class="section-head centered">
+          <span class="section-kicker">Una experiencia más enfocada</span>
+          <h2>Diseñada para ayudar a decidir mejor</h2>
+          <p>
+            En lugar de saturar la página, organizamos la información para que el usuario descubra, compare y actúe con claridad.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <span class="benefit-number">01</span>
+            <h3>Selección curada</h3>
+            <p>Solo se muestran opciones publicadas con atributos claros y comparables.</p>
+          </article>
+
+          <article class="benefit-card feature">
+            <span class="benefit-number">02</span>
+            <h3>Visitas guiadas</h3>
+            <p>El flujo está pensado para llevar al usuario desde la exploración hasta la solicitud de visita.</p>
+          </article>
+
+          <article class="benefit-card">
+            <span class="benefit-number">03</span>
+            <h3>Asesoría cercana</h3>
+            <p>El asistente y el formulario reducen fricción y orientan al usuario hacia la siguiente acción.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="process-section section" id="proceso">
+      <div class="container process-layout">
+
+        <div class="process-copy">
+          <span class="section-kicker">Cómo funciona</span>
+          <h2>De la búsqueda a la visita en un recorrido más claro</h2>
+          <p>
+            El sitio está organizado para que la navegación se sienta rápida, visual y orientada a la acción.
+          </p>
+          <a href="#propiedades" class="process-link">Empezar a explorar →</a>
+        </div>
+
+        <div class="process-cards">
+          <article class="process-card">
+            <span>1</span>
+            <div>
+              <h3>Explora</h3>
+              <p>Revisa propiedades, compara precios y filtra por distrito o dormitorios.</p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <span>2</span>
+            <div>
+              <h3>Consulta</h3>
+              <p>Abre la ficha o conversa con el asistente para resolver dudas puntuales.</p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <span>3</span>
+            <div>
+              <h3>Agenda</h3>
+              <p>Solicita contacto con la propiedad preseleccionada para avanzar sin fricción.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact-section section" id="contacto">
+      <div class="container contact-layout">
+
+        <div class="contact-copy">
+          <span class="section-kicker light">Atención personalizada</span>
+          <h2>¿Ya viste una propiedad que te interesa?</h2>
+          <p>
+            Déjanos tus datos y te ayudaremos a continuar. El sistema puede rellenar automáticamente la propiedad seleccionada desde la ficha o desde el chatbot.
+          </p>
+
+          <div class="contact-points">
+            <article>
+              <strong>Horario</strong>
+              <span>Lunes a sábado · 9:00 a. m. – 7:00 p. m.</span>
+            </article>
+            <article>
+              <strong>Respuesta</strong>
+              <span>Dentro del mismo día hábil</span>
+            </article>
+            <article>
+              <strong>Asistencia</strong>
+              <span>Orientación para visitas y consultas</span>
+            </article>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form">
+          <div class="field-grid">
+            <label>
+              <span>Nombre</span>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Tu nombre"
+                autocomplete="name"
+                required
+              >
+            </label>
+
+            <label>
+              <span>Correo</span>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="tu@email.com"
+                autocomplete="email"
+                required
+              >
+            </label>
+          </div>
+
+          <label>
+            <span>Propiedad de interés</span>
+            <select id="property-interest" name="property-interest">
+              <option value="">Selecciona una propiedad</option>
+              <option>Villa moderna</option>
+              <option>Residencial lujoso</option>
+              <option>Mansión lujosa</option>
+              <option>Casa familiar premium</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Mensaje</span>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Cuéntanos qué necesitas saber"
+              required
+            ></textarea>
+          </label>
+
+          <button type="submit" class="button button-primary full-width">
+            Solicitar contacto
+          </button>
+
+          <p id="contact-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-layout">
+      <a href="#inicio" class="brand footer-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40">
+            <path d="M7 18.5 20 8l13 10.5V32H23v-8h-6v8H7Z" fill="currentColor" />
+          </svg>
+        </span>
+        <span>Premium<strong>Home</strong></span>
+      </a>
+
+      <p>Propiedades seleccionadas y acompañamiento inmobiliario en Lima.</p>
+      <p>© 2026 PremiumHome. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- DIALOG -->
+  <dialog id="property-dialog" class="property-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-media">
+      <img id="dialog-image" src="" alt="">
+    </div>
+
+    <div class="dialog-content">
+      <button
+        type="button"
+        id="dialog-close"
+        class="dialog-close"
+        aria-label="Cerrar detalles"
+      >
+        ×
+      </button>
+
+      <span id="dialog-status" class="dialog-status"></span>
+      <p id="dialog-location" class="location"></p>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-price" class="dialog-price"></p>
+      <p id="dialog-description" class="dialog-description"></p>
+      <ul id="dialog-features" class="dialog-features"></ul>
+
+      <div class="dialog-actions">
+        <button type="button" id="dialog-contact" class="button button-primary">
+          Solicitar visita
+        </button>
+
+        <button type="button" id="dialog-chat" class="button button-secondary">
+          Preguntar al asistente
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- CHATBOT -->
+  <div class="chatbot" aria-live="polite">
+    <button
+      id="chatbot-toggle"
+      class="chatbot-toggle"
+      aria-label="Abrir asistente de PremiumHome"
+      aria-controls="chatbot-box"
+      aria-expanded="false"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M20 11.5a7.5 7.5 0 0 1-8 7.5 9 9 0 0 1-3.5-.7L4 20l1.5-4A7.1 7.1 0 0 1 4 11.5 7.5 7.5 0 0 1 12 4a7.5 7.5 0 0 1 8 7.5Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <span class="chat-pulse" aria-hidden="true"></span>
+    </button>
+
+    <section
+      id="chatbot-box"
+      class="chatbot-box"
+      aria-label="Asistente PremiumHome"
+      hidden
+    >
+      <header class="chatbot-header">
+        <div class="bot-avatar" aria-hidden="true">PH</div>
+
+        <div>
+          <span>Asistente virtual</span>
+          <h2>PremiumHome</h2>
+          <p><i></i>En línea</p>
+        </div>
+
+        <button
+          id="chatbot-close"
+          class="chatbot-close"
+          type="button"
+          aria-label="Cerrar chat"
+        >
+          ×
+        </button>
+      </header>
+
+      <div id="chatbot-messages" class="chatbot-messages">
+        <div class="bot-message message">
+          <p>
+            Hola 👋 Puedo ayudarte con información exacta de las propiedades publicadas y guiarte para solicitar una visita.
+          </p>
+          <p class="message-hint">
+            Usa una de estas opciones para ir más rápido:
+          </p>
+        </div>
+
+        <div class="quick-replies" id="initial-quick-replies">
+          <button type="button" data-chat-action="list">Ver propiedades</button>
+          <button type="button" data-chat-action="prices">Comparar precios</button>
+          <button type="button" data-chat-action="locations">Ver distritos</button>
+          <button type="button" data-chat-action="visit">Agendar visita</button>
+        </div>
+      </div>
+
+      <div class="chat-context" id="chat-context" hidden>
+        <span>Consultando:</span>
+        <strong id="chat-context-name"></strong>
+        <button
+          type="button"
+          id="clear-context"
+          aria-label="Quitar propiedad seleccionada"
+        >
+          ×
+        </button>
+      </div>
+
+      <form id="chatbot-form" class="chatbot-form">
+        <label class="sr-only" for="chatbot-input">Pregunta para el asistente</label>
+        <input
+          type="text"
+          id="chatbot-input"
+          placeholder="Ej. precio de la casa en Surco"
+          autocomplete="off"
+          maxlength="180"
+          required
+        >
+        <button type="submit" aria-label="Enviar mensaje">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="m4 4 17 8-17 8 3-8-3-8Zm3 8h14"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </form>
+
+      <p class="chatbot-disclaimer">
+        El asistente responde solo con la información publicada en esta página.
+      </p>
+    </section>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>
