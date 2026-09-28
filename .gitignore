@@ -4,3 +4,14 @@ Thumbs.db
 desktop.ini
 .vscode/
 .idea/
+
+# Local dependencies and build output
+node_modules/
+dist/
+build/
+.vercel/
+
+# Environment files
+.env
+.env.*
+!.env.example
