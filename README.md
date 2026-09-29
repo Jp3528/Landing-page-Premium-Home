@@ -1,14 +1,15 @@
-# Landing Page Premium Home
+# Distrito Alto
 
-![Vista previa de Landing Page Premium Home](docs/preview.png)
+![Vista previa de Distrito Alto](docs/preview.png)
 
-Landing page responsive para una marca inmobiliaria premium. El proyecto esta enfocado en presentar una propiedad o servicio de vivienda con una estructura clara, secciones comerciales y un chatbot basico de atencion.
+Landing page responsive para una marca inmobiliaria urbana. El proyecto presenta una seleccion corta de propiedades en Lima con filtros, fichas de detalle, formulario de contacto y un chatbot de demostracion orientado a consultas inmobiliarias.
 
 ## Funcionalidades
 
-- Hero principal con mensaje comercial y llamado a la accion.
-- Secciones para beneficios, imagenes, informacion del servicio y contacto.
-- Chatbot frontend de demostracion para preguntas frecuentes.
+- Hero con imagen real de fondo y mensaje de curaduria inmobiliaria.
+- Catalogo filtrable por zona, dormitorios y busqueda libre.
+- Fichas de detalle con imagen, precio, area y caracteristicas clave.
+- Chatbot frontend de demostracion para consultas sobre propiedades publicadas.
 - Recursos visuales locales para que la pagina funcione sin depender de APIs externas.
 - Estructura simple, ideal para publicar como sitio estatico en GitHub Pages, Netlify o Vercel.
 

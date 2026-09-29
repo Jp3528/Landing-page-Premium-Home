@@ -9,115 +9,115 @@
 
   const properties = {
 
-    "villa-moderna": {
+    "loft-mirador": {
 
       name:
-        "Villa moderna",
+        "Loft Mirador",
 
       location:
-        "La Molina, Lima",
+        "Barranco, Lima",
 
       district:
-        "La Molina",
+        "Barranco",
 
       price:
-        "$50,000",
+        "S/ 690,000",
 
       bedrooms:
-        4,
+        1,
 
       bathrooms:
-        3,
+        1,
 
       area:
-        "320 m²",
+        "78 m²",
 
       status:
-        "Disponible",
+        "Ideal inversión",
 
       image:
         "img/1.png",
 
       description:
-        "Villa luminosa con piscina, jardín privado y zona social integrada."
+        "Loft compacto con balcón, luz natural y cercanía a cafés, galerías y malecón."
 
     },
 
 
-    "residencial-lujoso": {
+    "suite-parque": {
 
       name:
-        "Residencial lujoso",
+        "Suite Parque",
 
       location:
-        "San Isidro, Lima",
+        "Miraflores, Lima",
 
       district:
-        "San Isidro",
+        "Miraflores",
 
       price:
-        "$20,000",
+        "S/ 980,000",
 
       bedrooms:
-        3,
+        2,
 
       bathrooms:
         2,
 
       area:
-        "240 m²",
+        "118 m²",
 
       status:
-        "Nuevo",
+        "Lista para mudanza",
 
       image:
         "img/2.png",
 
       description:
-        "Propiedad privada cerca de parques, comercios y vías principales."
+        "Departamento sereno frente a parques, con cocina abierta y área social integrada."
 
     },
 
 
-    "mansion-lujosa": {
+    "casa-patio": {
 
       name:
-        "Mansión lujosa",
+        "Casa Patio",
 
       location:
-        "Casuarinas, Lima",
+        "San Borja, Lima",
 
       district:
-        "Casuarinas",
+        "San Borja",
 
       price:
-        "$700,000",
+        "S/ 1,420,000",
 
       bedrooms:
-        6,
+        3,
 
       bathrooms:
-        5,
+        3,
 
       area:
-        "680 m²",
+        "246 m²",
 
       status:
-        "Premium",
+        "Casa urbana",
 
       image:
         "img/3.png",
 
       description:
-        "Residencia con terraza, jardín amplio y acabados de alta gama."
+        "Casa remodelada con patio central, estudio independiente y comedor abierto."
 
     },
 
 
-    "casa-familiar": {
+    "penthouse-terraza": {
 
       name:
-        "Casa familiar premium",
+        "Penthouse Terraza",
 
       location:
         "Surco, Lima",
@@ -126,25 +126,25 @@
         "Surco",
 
       price:
-        "$135,000",
+        "S/ 1,890,000",
 
       bedrooms:
-        5,
+        4,
 
       bathrooms:
         4,
 
       area:
-        "410 m²",
+        "310 m²",
 
       status:
-        "Oportunidad",
+        "Vista abierta",
 
       image:
         "img/4.png",
 
       description:
-        "Casa amplia con sala doble, estudio y patio ideal para reuniones."
+        "Penthouse dúplex con terraza social, parrilla y sala familiar privada."
 
     }
 
@@ -157,35 +157,36 @@
 
   const aliases = {
 
-    "villa-moderna": [
-      "villa",
-      "villa moderna",
-      "molina",
-      "la molina",
-      "ph-001"
+    "loft-mirador": [
+      "loft",
+      "loft mirador",
+      "mirador",
+      "barranco",
+      "da-101"
     ],
 
-    "residencial-lujoso": [
-      "residencial",
-      "residencial lujoso",
-      "san isidro",
-      "ph-002"
+    "suite-parque": [
+      "suite",
+      "suite parque",
+      "miraflores",
+      "parque",
+      "da-204"
     ],
 
-    "mansion-lujosa": [
-      "mansion",
-      "mansión",
-      "mansion lujosa",
-      "mansión lujosa",
-      "casuarinas",
-      "ph-003"
+    "casa-patio": [
+      "casa",
+      "casa patio",
+      "patio",
+      "san borja",
+      "da-318"
     ],
 
-    "casa-familiar": [
-      "casa familiar",
-      "casa familiar premium",
+    "penthouse-terraza": [
+      "penthouse",
+      "terraza",
+      "penthouse terraza",
       "surco",
-      "ph-004"
+      "da-427"
     ]
 
   };
@@ -250,7 +251,7 @@
 
           const label =
             img.alt ||
-            "PremiumHome";
+            "Distrito Alto";
 
 
           const cleanLabel =
@@ -585,6 +586,37 @@
 
     );
 
+  $("[data-clear-filters]")
+    ?.addEventListener(
+
+      "click",
+
+      () => {
+
+        if (search) {
+          search.value =
+            "";
+        }
+
+
+        if (district) {
+          district.value =
+            "all";
+        }
+
+
+        if (bedroom) {
+          bedroom.value =
+            "all";
+        }
+
+
+        filterProperties();
+
+      }
+
+    );
+
 
   /* =====================================
      FAVORITOS
@@ -637,6 +669,54 @@
 
   let activePropertyKey =
     null;
+
+
+  function openPropertyDialog() {
+
+    if (!dialog) {
+      return;
+    }
+
+
+    if (typeof dialog.showModal === "function") {
+      dialog.showModal();
+      return;
+    }
+
+
+    dialog.setAttribute(
+      "open",
+      ""
+    );
+
+    document.body.classList.add(
+      "dialog-fallback-open"
+    );
+
+  }
+
+
+  function closePropertyDialog() {
+
+    if (!dialog) {
+      return;
+    }
+
+
+    if (typeof dialog.close === "function") {
+      dialog.close();
+    } else {
+      dialog.removeAttribute(
+        "open"
+      );
+    }
+
+
+    document.body.classList.remove(
+      "dialog-fallback-open"
+    );
+
+  }
 
 
   function openProperty(key) {
@@ -724,7 +804,7 @@
       `;
 
 
-    dialog.showModal();
+    openPropertyDialog();
 
   }
 
@@ -760,7 +840,7 @@
 
       () => {
 
-        dialog?.close();
+        closePropertyDialog();
 
       }
 
@@ -777,7 +857,29 @@
         event.target === dialog
       ) {
 
-        dialog.close();
+        closePropertyDialog();
+
+      }
+
+    }
+
+  );
+
+
+  document.addEventListener(
+
+    "keydown",
+
+    (event) => {
+
+      if (
+        event.key === "Escape" &&
+        dialog?.hasAttribute(
+          "open"
+        )
+      ) {
+
+        closePropertyDialog();
 
       }
 
@@ -832,7 +934,7 @@
     }
 
 
-    dialog?.close();
+    closePropertyDialog();
 
 
     document
@@ -896,7 +998,7 @@
         }
 
 
-        dialog?.close();
+        closePropertyDialog();
 
 
         setChatContext(
@@ -912,7 +1014,7 @@
             properties[
               activePropertyKey
             ].name
-          }. Puedes preguntarme por precio, dormitorios, baños, área, ubicación o visita.`
+          }. Puedes preguntarme por precio, dormitorios, baños, área, ubicación o asesoría.`
         );
 
 
@@ -1092,10 +1194,10 @@
 
       (button) => {
 
-        button.addEventListener(
-          "click",
-          openChat
-        );
+      button.addEventListener(
+        "click",
+        openChat
+      );
 
       }
 
@@ -1688,7 +1790,7 @@
 
     return (
       `Tengo seleccionada “${property.name}”. ` +
-      "Puedo responder sobre precio, dormitorios, baños, área, ubicación o ayudarte a agendar una visita."
+      "Puedo responder sobre precio, dormitorios, baños, área, ubicación o ayudarte a solicitar asesoría."
     );
 
   }
@@ -1828,7 +1930,7 @@
     ) {
 
       addBotMessage(
-        "Hola. Puedo ayudarte únicamente con la información publicada de las propiedades de PremiumHome. ¿Qué quieres revisar?"
+        "Hola. Puedo ayudarte únicamente con la información publicada de Distrito Alto. ¿Qué quieres revisar?"
       );
 
 
@@ -1877,7 +1979,7 @@
 
 
       addBotMessage(
-        "Residencial lujoso: $20,000 · Villa moderna: $50,000 · Casa familiar premium: $135,000 · Mansión lujosa: $700,000."
+        "Loft Mirador: S/ 690,000 · Suite Parque: S/ 980,000 · Casa Patio: S/ 1,420,000 · Penthouse Terraza: S/ 1,890,000."
       );
 
 
@@ -1915,30 +2017,30 @@
     ) {
 
       addBotMessage(
-        "Las propiedades publicadas están en La Molina, San Isidro, Casuarinas y Surco, todas en Lima."
+        "Las propiedades publicadas están en Barranco, Miraflores, San Borja y Surco, todas en Lima."
       );
 
 
       addQuickReplies([
         [
-          "La Molina",
+          "Barranco",
           "select-property",
-          "villa-moderna"
+          "loft-mirador"
         ],
         [
-          "San Isidro",
+          "Miraflores",
           "select-property",
-          "residencial-lujoso"
+          "suite-parque"
         ],
         [
-          "Casuarinas",
+          "San Borja",
           "select-property",
-          "mansion-lujosa"
+          "casa-patio"
         ],
         [
           "Surco",
           "select-property",
-          "casa-familiar"
+          "penthouse-terraza"
         ]
       ]);
 
@@ -1964,7 +2066,7 @@
     ) {
 
       addBotMessage(
-        "Para agendar sin confusiones, primero elige la propiedad que quieres visitar."
+        "Para coordinar una visita o asesoría sin confusiones, primero elige la propiedad que quieres evaluar."
       );
 
 
@@ -2083,7 +2185,7 @@
       case "prices":
 
         addBotMessage(
-          "Precios publicados: Residencial lujoso $20,000 · Villa moderna $50,000 · Casa familiar premium $135,000 · Mansión lujosa $700,000."
+          "Precios publicados: Loft Mirador S/ 690,000 · Suite Parque S/ 980,000 · Casa Patio S/ 1,420,000 · Penthouse Terraza S/ 1,890,000."
         );
 
 
@@ -2104,30 +2206,30 @@
       case "locations":
 
         addBotMessage(
-          "Tenemos propiedades publicadas en La Molina, San Isidro, Casuarinas y Surco."
+          "Tenemos propiedades publicadas en Barranco, Miraflores, San Borja y Surco."
         );
 
 
         addQuickReplies([
           [
-            "La Molina",
+            "Barranco",
             "select-property",
-            "villa-moderna"
+            "loft-mirador"
           ],
           [
-            "San Isidro",
+            "Miraflores",
             "select-property",
-            "residencial-lujoso"
+            "suite-parque"
           ],
           [
-            "Casuarinas",
+            "San Borja",
             "select-property",
-            "mansion-lujosa"
+            "casa-patio"
           ],
           [
             "Surco",
             "select-property",
-            "casa-familiar"
+            "penthouse-terraza"
           ]
         ]);
 
